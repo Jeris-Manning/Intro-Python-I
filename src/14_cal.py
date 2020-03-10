@@ -18,15 +18,45 @@ and does the following:
    the format that your program expects arguments to be given.
    Then exit the program.
 
-Note: the user should provide argument input (in the initial call to run the file) and not 
+Note: the user should provide argument input (in the initial call to run the file) and not
 prompted input. Also, the brackets around year are to denote that the argument is
 optional, as this is a common convention in documentation.
 
-This would mean that from the command line you would call `python3 14_cal.py 4 2015` to 
-print out a calendar for April in 2015, but if you omit either the year or both values, 
+This would mean that from the command line you would call `python3 14_cal.py 4 2015` to
+print out a calendar for April in 2015, but if you omit either the year or both values,
 it should use today’s date to get the month and year.
 """
 
 import sys
 import calendar
-from datetime import datetime
+from datetime import date
+
+today = date.today()
+
+def calendars_make_great_gifts():
+  print("monkey")
+
+# yearHolder = date.year()
+
+# print(type(sys.argv[1]))
+
+# def calendars_make_great_gifts():
+#   try:
+#     if isinstance(int(sys.argv[1]), int) and isinstance(int(sys.argv[2]), int):
+#       mm = int(sys.argv[1])
+#       yy = int(sys.argv[2])
+#       if yy < 10000 and 0 < mm < 13:
+#         print(calendar.month(yy, mm))
+#       else:
+#         print(calendar.month(today.year, today.month))
+#     else:
+#       print("Garbage input. Try harder.
+# try:
+# if len(sys.argv)==1:
+#   print(calendar.month(today.year, today.month))
+# elif len(sys.argv)==2:
+#   print(calendar.month(today.year, int(sys.argv[1]).month))
+# elif len(sys.argv)==3:
+#   print(calendar.month(int(sys.argv[2]).year, int(sys.argv[1]).month))
+# else:
+  # print("jerk")
