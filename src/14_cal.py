@@ -34,29 +34,14 @@ from datetime import date
 today = date.today()
 
 def calendars_make_great_gifts():
-  print("monkey")
+  try:
+    if len(sys.argv)==1:
+      print(calendar.month(today.year, today.month))
+    elif len(sys.argv)==2:
+      print(calendar.month(today.year, int(sys.argv[1])))
+    elif len(sys.argv)==3:
+      print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
+  except:
+    print("Your input is the problem. We need a month (integer somewhere in the range of 1-12, followed by a space, followed by an integer representing the year (negative for BC)")
 
-# yearHolder = date.year()
-
-# print(type(sys.argv[1]))
-
-# def calendars_make_great_gifts():
-#   try:
-#     if isinstance(int(sys.argv[1]), int) and isinstance(int(sys.argv[2]), int):
-#       mm = int(sys.argv[1])
-#       yy = int(sys.argv[2])
-#       if yy < 10000 and 0 < mm < 13:
-#         print(calendar.month(yy, mm))
-#       else:
-#         print(calendar.month(today.year, today.month))
-#     else:
-#       print("Garbage input. Try harder.
-# try:
-# if len(sys.argv)==1:
-#   print(calendar.month(today.year, today.month))
-# elif len(sys.argv)==2:
-#   print(calendar.month(today.year, int(sys.argv[1]).month))
-# elif len(sys.argv)==3:
-#   print(calendar.month(int(sys.argv[2]).year, int(sys.argv[1]).month))
-# else:
-  # print("jerk")
+calendars_make_great_gifts()
